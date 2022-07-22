@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname , "Assets")));
 app.use(express.static(path.join(__dirname , "Images")));
-app.set('Views', path.join(__dirname, 'Views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set("view engine" , "ejs");
 app.use('/', homeRoute);
 app.use('/userProduct', userProductRoute);
