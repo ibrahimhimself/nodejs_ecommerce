@@ -1,10 +1,10 @@
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'Shop_Project'
+    host:process.env.host,
+    user:process.env.username,
+    password:process.env.password,
+    database:process.env.db
 })
 
 // const productTableSQL = 
