@@ -32,7 +32,7 @@ app.use((err, req, res, next) => {
     return res.send('Internal Server Error');
 });
 
-app.listen(4000|process.env.PORT , ()=>{
+app.listen(process.env.PORT|4000 , ()=>{
     console.log("Server Start On Port 4000");
     console.log(process.env.PORT)
 })
