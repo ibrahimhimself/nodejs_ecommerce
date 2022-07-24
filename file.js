@@ -6,6 +6,7 @@ const userProductRoute = require('./Routes/userProduct.route')
 const authRoute = require('./Routes/Auth.route');
 const productDetailsRoute = require("./Routes/productDetails.route");
 const app = express();
+require('dotenv').config();
 
 app.use(express.static(path.join(__dirname , "Assets")));
 app.use(express.static(path.join(__dirname , "Images")));
@@ -31,6 +32,7 @@ app.use((err, req, res, next) => {
     return res.send('Internal Server Error');
 });
 
-app.listen(process.env.PORT , ()=>{
-    console.log("Server Start On Port 4000")
+app.listen(4000|process.env.PORT , ()=>{
+    console.log("Server Start On Port 4000");
+    console.log(process.env.PORT)
 })

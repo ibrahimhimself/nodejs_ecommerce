@@ -9,8 +9,9 @@ exports.getProductDetails = (req , res) => {
     var sql = `Select * from products where ${req.params.id}`
         db.query(sql,(err,result)=>{
         if(err) throw err
+        db.end(); 
         res.render('product',{product:result})
-           
+         
     })
     
 }

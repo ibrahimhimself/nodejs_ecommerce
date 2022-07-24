@@ -8,7 +8,9 @@ exports.getHome = (req,res,next) => {
     var sql = "Select * from Products"
         db.query(sql,(err,result)=>{
         if(err) throw err
+        db.end();
         res.render('index',{product:result})
+                
     })
 
 }

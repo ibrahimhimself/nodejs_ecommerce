@@ -8,6 +8,8 @@ exports.getProduct = (req,res,next) => {
     var sql = "Select * from products"
         db.query(sql,(err,result)=>{
         if(err) throw err
+        db.end();
         res.render('userProduct',{product:result})
+        
     })
 }
